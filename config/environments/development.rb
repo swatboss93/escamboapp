@@ -41,6 +41,9 @@ Rails.application.configure do
   # Better erros config
   BetterErrors::Middleware.allow_ip! '192.168.1.2'
 
+  # Foreman fix
+  $stdout.sync = true
+
   #Devise config
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
